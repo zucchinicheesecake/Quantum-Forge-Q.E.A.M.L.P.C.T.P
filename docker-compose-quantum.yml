@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  quantum-trader:
+    build: .
+    runtime: nvidia
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    volumes:
+      - ./config/production:/app/config/production
+      - quantum-data:/app/data
+    ports:
+      - "8000:8000"
+      - "8546:8546" # Quantum debug port
+    depends_on:
+      - redis
+      - postgres
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    command: redis-server --save 60 1 --loglevel warning
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+volumes:
+  quantum-data:
+  redis-data:
+  pg-data:
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

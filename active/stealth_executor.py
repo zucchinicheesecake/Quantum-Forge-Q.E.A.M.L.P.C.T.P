@@ -1,5 +1,7 @@
 from itertools import cycle
 import numpy as np
+from tor_network import TorNetwork
+from context_managers import rotating_ip_context
 
 class GhostWriter:
     def __init__(self):

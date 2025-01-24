@@ -1,6 +1,6 @@
 import argparse
 from quantum_engine_v2 import QuantumTrader  # Updated import
-from stealth_executor import GhostWriter
+from active.stealth_executor import GhostWriter
 from risk_models import KellyCriterionOptimizer
 
 def main():
