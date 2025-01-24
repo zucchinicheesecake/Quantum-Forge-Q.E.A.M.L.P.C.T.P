@@ -1,0 +1,21 @@
+exchange:
+  name: phemex
+  api_key: ${PHEMEX_API_KEY}
+  api_secret: ${PHEMEX_API_SECRET}
+  testnet: false
+
+risk:
+  max_position_size: 1.0
+  max_drawdown: 0.02
+  var_confidence: 0.99
+  position_limits:
+    BTC-USD: 10.0
+    ETH-USD: 100.0
+
+execution:
+  min_slice_size: 0.01
+  max_slippage: 0.001
+  urgency_levels:
+    low: 0.3
+    medium: 0.6
+    high: 0.9

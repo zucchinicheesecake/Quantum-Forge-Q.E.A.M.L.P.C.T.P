@@ -1,0 +1,42 @@
+============================= test session starts =============================
+platform win32 -- Python 3.8.10, pytest-8.3.4, pluggy-1.5.0 -- C:\Users\lilza\AppData\Local\Programs\Python\Python38\python.exe
+cachedir: .pytest_cache
+rootdir: c:\Users\lilza\Desktop\phemex_trading_bot\active
+collecting ... collected 1 item
+
+GoCodeo-test_chart_manager_purge_chart_memory_purge_chart_memory.py::TestPurgeChartMemory::test_purge_chart_memory_removes_all_series Windows fatal exception: access violation
+
+Current thread 0x00002e2c (most recent call first):
+  File "c:\Users\lilza\Desktop\phemex_trading_bot\active\GoCodeo-test_chart_manager_purge_chart_memory_purge_chart_memory.py", line 17 in test_purge_chart_memory_removes_all_series
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\python.py", line 159 in pytest_pyfunc_call
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_callers.py", line 103 in _multicall
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_hooks.py", line 513 in __call__
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\python.py", line 1627 in runtest
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\runner.py", line 174 in pytest_runtest_call
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_callers.py", line 103 in _multicall
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_hooks.py", line 513 in __call__
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\runner.py", line 242 in <lambda>
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\runner.py", line 341 in from_call
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\runner.py", line 241 in call_and_report
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\runner.py", line 132 in runtestprotocol
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\runner.py", line 113 in pytest_runtest_protocol
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_callers.py", line 103 in _multicall
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_hooks.py", line 513 in __call__
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\main.py", line 362 in pytest_runtestloop
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_callers.py", line 103 in _multicall
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_hooks.py", line 513 in __call__
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\main.py", line 337 in _main
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\main.py", line 283 in wrap_session
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\main.py", line 330 in pytest_cmdline_main
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_callers.py", line 103 in _multicall
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pluggy\_hooks.py", line 513 in __call__
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\config\__init__.py", line 175 in main
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\_pytest\config\__init__.py", line 201 in console_main
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\site-packages\pytest\__main__.py", line 9 in <module>
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\runpy.py", line 87 in _run_code
+  File "C:\Users\lilza\AppData\Local\Programs\Python\Python38\lib\runpy.py", line 194 in _run_module_as_main
