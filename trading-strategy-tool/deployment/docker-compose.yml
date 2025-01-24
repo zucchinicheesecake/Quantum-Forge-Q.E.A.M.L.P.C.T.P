@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ../
+      dockerfile: deployment/Dockerfile
+      target: backend
+    volumes:
+      - ../backend:/app/backend
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "5000:5000"
+    command: python backend/main.py
+
+  frontend:
+    build:
+      context: ../
+      dockerfile: deployment/Dockerfile
+      target: frontend
+    volumes:
+      - ../frontend:/app
+    ports:
+      - "3000:80"
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ../frontend/dist:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend
+      - backend

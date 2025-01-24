@@ -1,0 +1,8 @@
+# Configuration file for the Phemex Trading Bot
+api_credentials:
+  api_key: "your_api_key"
+  secret_key: "your_secret_key"
+
+risk_management:
+  max_drawdown: 0.1
+  position_size: 0.01

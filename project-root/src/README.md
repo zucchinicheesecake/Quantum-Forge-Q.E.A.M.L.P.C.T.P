@@ -1,5 +1,9 @@
-# 💻 Source Code Documentation
+# Source Code
 
-This directory contains the core source code of the documentation system.
+This directory contains the main source code for the project.
 
-## 🗂 Directory Structure
+## Structure
+- `components/`: Reusable UI components.
+- `utils/`: Utility functions and helpers.
+- `active/`: Active trading strategies.
+- `backend/`: Backend services and logic.
