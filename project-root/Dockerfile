@@ -8,7 +8,11 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    pipenv \
+    ocl-icd-opencl-dev && \
+    rm -rf /var/lib/apt/lists/* && \
+    npm install
 
 # Copy the rest of the application code
 COPY . .

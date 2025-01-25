@@ -1,0 +1,13 @@
+alert_rules:
+  - name: HighDecoherence
+    condition: fidelity < 0.85
+    severity: critical
+    response:
+      - circuit_reset
+      - notify_channel: #quantum-alerts
+
+  - name: OrderLag
+    condition: latency > 200
+    severity: warning
+    response:
+      - scale_workers: +2
